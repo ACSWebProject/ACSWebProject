@@ -1,0 +1,15 @@
+# Ignorar ficheiros temporarios do Wondows
+Thumbs.db
+
+# Ignorar pacotes de ficheiros
+*.zip
+*.rar
+
+# Ignorar ficheiros temporarios do Visual Studio
+*.suo
+*.user
+*.userprefs
+
+# Ignorar as pastas com ficheiros binarios gerados via compilação
+[Oo]bj/
+[Bb]in/
