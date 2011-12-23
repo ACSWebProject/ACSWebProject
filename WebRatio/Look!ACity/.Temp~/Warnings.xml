@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Warnings> 
+  <Warning xpath="id('sv2#area4#page15#dau2#ln32#par116')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="Id_Cidade_PASSING"> 
+    <Message>The passing parameter 'Id_Cidade_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#area4#page15#dau2#ln32#par116'</Resolution> 
+  </Warning> 
+</Warnings>

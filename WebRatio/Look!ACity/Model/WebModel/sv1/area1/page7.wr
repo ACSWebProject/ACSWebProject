@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1" gr:y="0" id="sv1#area1#page7" name="Ver Coment&#225;rios" landmark="false">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page7#inu3" name="Lista de Coment&#225;rios" entity="ent8" linkOrder="sv1#area1#page7#inu3#ln3" displayAttributes="ent8#att26 ent8#att27 rel14#role27.ent2#att18 rel11#role22.userName">
+      <Link id="sv1#area1#page7#inu3#ln3" name="Remover Comentario" to="sv1#area1#dlu1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-53,64,-37,-72"/>
+      <SortAttribute attribute="rel14#role27.ent2#att18" order="ascending"/>
+      <SortAttribute attribute="ent8#att27" order="descending"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area1#page7#inu3">
+          <layout:Link link="sv1#area1#page7#inu3#ln3"/>
+          <layout:Attribute attribute="ent8#att26"/>
+          <layout:Attribute attribute="ent8#att27"/>
+          <layout:Attribute attribute="rel14#role27.ent2#att18"/>
+          <layout:Attribute attribute="rel11#role22.userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

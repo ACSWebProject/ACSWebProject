@@ -1,158 +1,209 @@
-<DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="20" gr:hideAttributes="false" attributeOrder="userOID userName password email">
-    <Attribute name="oid" id="userOID" type="integer" key="true"/>
-    <Attribute name="userName" id="userName" type="string"/>
-    <Attribute name="password" id="password" type="password"/>
-    <Attribute name="email" id="email" type="string"/>
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="40" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db4" db:table="user">
+    <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="userName" id="userName" type="string" db:column="username"/>
+    <Attribute name="password" id="password" type="password" db:column="password"/>
+    <Attribute name="email" id="email" type="string" db:column="email"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="20" gr:y="230" gr:hideAttributes="false" attributeOrder="groupOID groupName">
-    <Attribute name="oid" id="groupOID" type="integer" key="true"/>
-    <Attribute name="groupName" id="groupName" type="string"/>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="20" gr:y="250" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db4" db:table="group">
+    <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="20" gr:y="370" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
-    <Attribute name="oid" id="moduleOID" type="integer" key="true"/>
-    <Attribute name="moduleID" id="moduleID" type="string"/>
-    <Attribute name="moduleName" id="moduleName" type="string"/>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="20" gr:y="390" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db4" db:table="module">
+    <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
   </Entity>
-  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group">
-    <RelationshipRole1 id="User2Group" name="groups" maxCard="N"/>
-    <RelationshipRole2 id="Group2User" name="users" maxCard="N"/>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db4" db:table="user_group">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="-27,97,-24,-88">
-    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1"/>
-    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N"/>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="-27,97,-24,-88" db:database="db4" db:table="user">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module">
-    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1"/>
-    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N"/>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db4" db:table="group">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="-30,75,-35,-78">
-    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
-    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="-30,75,-35,-78" db:database="db4" db:table="group_module">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="260" gr:y="30" id="ent1" name="Tipo_Utilizador" duration="persistent" attributeOrder="ent1#att1 ent1#att34">
-    <Attribute id="ent1#att1" key="true" name="Id_Tipo_Utilizador" type="integer"/>
-    <Attribute id="ent1#att34" name="Descricao" type="string"/>
+  <Entity gr:x="560" gr:y="30" id="ent2" name="Cidade" duration="persistent" attributeOrder="ent2#att2 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att37 ent2#att22 ent2#att23 ent2#att24 ent2#att35 ent2#att38 ent2#att39" db:database="db4" db:table="cidade">
+    <Attribute id="ent2#att2" key="true" name="Id_Cidade" type="integer" db:column="id_cidade"/>
+    <Attribute id="ent2#att18" name="Nome" type="string" db:column="nome"/>
+    <Attribute id="ent2#att19" name="Descricao" type="string" db:column="descricao"/>
+    <Attribute id="ent2#att20" name="Area" type="string" db:column="area"/>
+    <Attribute id="ent2#att21" name="Num_Habitantes" type="string" db:column="num_habitantes"/>
+    <Attribute id="ent2#att22" name="Id_Pais" type="integer" db:column="id_pais"/>
+    <Attribute id="ent2#att23" name="Id_Moeda" type="integer" db:column="id_moeda"/>
+    <Attribute id="ent2#att24" name="Id_Lingua" type="integer" db:column="id_lingua"/>
+    <Attribute id="ent2#att35" name="Id_Continente" type="integer" db:column="id_continente"/>
+    <Attribute id="ent2#att37" name="Bandeira" type="string" db:column="bandeira"/>
+    <Attribute id="ent2#att38" name="Id_Coordenadas" type="integer" db:column="id_coordenadas"/>
+    <Attribute id="ent2#att39" name="Id_Estado" type="integer" db:column="id_estado"/>
   </Entity>
-  <Entity gr:x="800" gr:y="20" id="ent2" name="Cidade" duration="persistent" attributeOrder="ent2#att2 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att37 ent2#att22 ent2#att23 ent2#att24 ent2#att35 ent2#att38 ent2#att39">
-    <Attribute id="ent2#att2" key="true" name="Id_Cidade" type="integer"/>
-    <Attribute id="ent2#att18" name="Nome" type="string"/>
-    <Attribute id="ent2#att19" name="Descricao" type="string"/>
-    <Attribute id="ent2#att20" name="Area" type="string"/>
-    <Attribute id="ent2#att21" name="Num_Habitantes" type="string"/>
-    <Attribute id="ent2#att22" name="Id_Pais" type="integer"/>
-    <Attribute id="ent2#att23" name="Id_Moeda" type="integer"/>
-    <Attribute id="ent2#att24" name="Id_Lingua" type="integer"/>
-    <Attribute id="ent2#att35" name="Id_Continente" type="string"/>
-    <Attribute id="ent2#att37" name="Bandeira" type="string"/>
-    <Attribute id="ent2#att38" name="Id_Coordenadas" type="integer"/>
-    <Attribute id="ent2#att39" name="Id_Estado" type="integer"/>
+  <Entity gr:x="860" gr:y="390" id="ent3" name="Lingua" duration="persistent" attributeOrder="ent3#att3 ent3#att17" db:database="db4" db:table="lingua">
+    <Attribute id="ent3#att3" key="true" name="Id_Lingua" type="integer" db:column="id_lingua"/>
+    <Attribute id="ent3#att17" name="Nome" type="string" db:column="nome"/>
   </Entity>
-  <Entity gr:x="1100" gr:y="380" id="ent3" name="Lingua" duration="persistent" attributeOrder="ent3#att3 ent3#att17">
-    <Attribute id="ent3#att3" key="true" name="Id_Lingua" type="integer"/>
-    <Attribute id="ent3#att17" name="Nome" type="string"/>
+  <Entity gr:x="860" gr:y="140" id="ent5" name="Moeda" duration="persistent" attributeOrder="ent5#att5 ent5#att16" db:database="db4" db:table="moeda">
+    <Attribute id="ent5#att5" key="true" name="Id_Moeda" type="integer" db:column="id_moeda"/>
+    <Attribute id="ent5#att16" name="Nome" type="string" db:column="nome"/>
   </Entity>
-  <Entity gr:x="260" gr:y="180" id="ent4" name="Utilizador" duration="persistent" attributeOrder="ent4#att4 ent4#att10 ent4#att11 ent4#att12 ent4#att13 ent4#att14">
-    <Attribute id="ent4#att4" key="true" name="Id_Utilizador" type="integer"/>
-    <Attribute id="ent4#att10" name="Nome" type="string"/>
-    <Attribute id="ent4#att11" name="Email" type="string"/>
-    <Attribute id="ent4#att12" name="Username" type="string"/>
-    <Attribute id="ent4#att13" name="Password" type="string"/>
-    <Attribute id="ent4#att14" name="Id_Tipo_Utilizador" type="integer"/>
+  <Entity gr:x="860" gr:y="250" id="ent6" name="Pais" duration="persistent" attributeOrder="ent6#att6 ent6#att15 ent6#att40" db:database="db4" db:table="pais">
+    <Attribute id="ent6#att6" key="true" name="Id_Pais" type="integer" db:column="id_pais"/>
+    <Attribute id="ent6#att15" name="Nome" type="string" db:column="nome"/>
+    <Attribute id="ent6#att40" name="Bandeira" type="string" db:column="bandeira"/>
   </Entity>
-  <Entity gr:x="1100" gr:y="130" id="ent5" name="Moeda" duration="persistent" attributeOrder="ent5#att5 ent5#att16">
-    <Attribute id="ent5#att5" key="true" name="Id_Moeda" type="integer"/>
-    <Attribute id="ent5#att16" name="Nome" type="string"/>
+  <Entity gr:x="320" gr:y="270" id="ent7" name="Rating" duration="persistent" attributeOrder="ent7#att7 ent7#att48 ent7#att49" db:database="db4" db:table="rating">
+    <Attribute id="ent7#att7" key="true" name="Id_Utilizador" type="integer" db:column="id_utilizador"/>
+    <Attribute id="ent7#att48" name="Id_Cidade" type="integer" key="true" db:column="id_cidade"/>
+    <Attribute id="ent7#att49" name="Classificacao" type="integer" db:column="classificacao"/>
   </Entity>
-  <Entity gr:x="1100" gr:y="240" id="ent6" name="Pais" duration="persistent" attributeOrder="ent6#att6 ent6#att15 ent6#att40">
-    <Attribute id="ent6#att6" key="true" name="Id_Pais" type="integer"/>
-    <Attribute id="ent6#att15" name="Nome" type="string"/>
-    <Attribute id="ent6#att40" name="Bandeira" type="string"/>
+  <Entity gr:x="300" gr:y="510" id="ent8" name="Comentario" duration="persistent" attributeOrder="ent8#att8 ent8#att26 ent8#att27 ent8#att28 ent8#att50" db:database="db4" db:table="comentario">
+    <Attribute id="ent8#att8" key="true" name="Id_Comentario" type="integer" db:column="id_comentario"/>
+    <Attribute id="ent8#att26" name="Comentario" type="string" db:column="comentario"/>
+    <Attribute id="ent8#att27" name="Data" type="date" db:column="data"/>
+    <Attribute id="ent8#att28" name="Id_Utilizador" type="integer" db:column="id_utilizador"/>
+    <Attribute id="ent8#att50" name="Id_Cidade" type="integer" db:column="id_cidade"/>
   </Entity>
-  <Entity gr:x="560" gr:y="260" id="ent7" name="Rating" duration="persistent" attributeOrder="ent7#att7 ent7#att48 ent7#att49">
-    <Attribute id="ent7#att7" key="true" name="Id_Utilizador" type="integer"/>
-    <Attribute id="ent7#att48" name="Id_Cidade" type="integer" key="true"/>
-    <Attribute id="ent7#att49" name="Classificacao" type="integer"/>
+  <Entity gr:x="860" gr:y="30" id="ent9" name="Estado" duration="persistent" attributeOrder="ent9#att9 ent9#att25" db:database="db4" db:table="estado">
+    <Attribute id="ent9#att9" key="true" name="Id_Estado" type="integer" db:column="id_estado"/>
+    <Attribute id="ent9#att25" name="Descricao" type="string" db:column="descricao"/>
   </Entity>
-  <Entity gr:x="270" gr:y="440" id="ent8" name="Comentario" duration="persistent" attributeOrder="ent8#att8 ent8#att26 ent8#att27 ent8#att28 ent8#att50">
-    <Attribute id="ent8#att8" key="true" name="Id_Comentario" type="integer"/>
-    <Attribute id="ent8#att26" name="Comentario" type="string"/>
-    <Attribute id="ent8#att27" name="Data" type="date"/>
-    <Attribute id="ent8#att28" name="Id_Utilizador" type="integer"/>
-    <Attribute id="ent8#att50" name="Id_Cidade" type="integer"/>
+  <Entity gr:x="320" gr:y="40" id="ent11" name="Foto" duration="persistent" attributeOrder="ent11#att30 ent11#att31 ent11#att32 ent11#att33 ent11#att46 ent11#att47" db:database="db4" db:table="foto">
+    <Attribute id="ent11#att30" key="true" name="Id_Foto" type="integer" db:column="id_foto"/>
+    <Attribute id="ent11#att31" name="URL" type="string" db:column="url"/>
+    <Attribute id="ent11#att32" name="Descricao" type="string" db:column="descricao"/>
+    <Attribute id="ent11#att33" name="Data" type="date" db:column="data"/>
+    <Attribute id="ent11#att46" name="Id_utilizador" type="integer" db:column="id_utilizador"/>
+    <Attribute id="ent11#att47" name="Id_Cidade" type="integer" db:column="id_cidade"/>
   </Entity>
-  <Entity gr:x="1100" gr:y="20" id="ent9" name="Estado" duration="persistent" attributeOrder="ent9#att9 ent9#att25">
-    <Attribute id="ent9#att9" key="true" name="Id_Estado" type="integer"/>
-    <Attribute id="ent9#att25" name="Descricao" type="string"/>
+  <Entity gr:x="790" gr:y="500" id="ent12" name="Continente" duration="persistent" attributeOrder="ent12#att36 ent12#att41" db:database="db4" db:table="continente">
+    <Attribute id="ent12#att36" key="true" name="Id_Continente" type="integer" db:column="id_continente"/>
+    <Attribute id="ent12#att41" name="Descricao" type="string" db:column="descricao"/>
   </Entity>
-  <Entity gr:x="560" gr:y="30" id="ent11" name="Foto" duration="persistent" attributeOrder="ent11#att30 ent11#att31 ent11#att32 ent11#att33 ent11#att46 ent11#att47">
-    <Attribute id="ent11#att30" key="true" name="Id_Foto" type="integer"/>
-    <Attribute id="ent11#att31" name="URL" type="string"/>
-    <Attribute id="ent11#att32" name="Descricao" type="string"/>
-    <Attribute id="ent11#att33" name="Data" type="date"/>
-    <Attribute id="ent11#att46" name="Id_utilizador" type="integer"/>
-    <Attribute id="ent11#att47" name="Id_Cidade" type="integer"/>
+  <Entity gr:x="560" gr:y="430" id="ent13" name="Coordenadas" duration="persistent" attributeOrder="ent13#att42 ent13#att43 ent13#att44 ent13#att45" db:database="db4" db:table="coordenadas">
+    <Attribute id="ent13#att42" key="true" name="id_Coordenadas" type="integer" db:column="id_coordenadas"/>
+    <Attribute id="ent13#att43" name="Latitute" type="string" db:column="latitute"/>
+    <Attribute id="ent13#att44" name="Longitude" type="string" db:column="longitude"/>
+    <Attribute id="ent13#att45" name="Altitude" type="string" db:column="altitude"/>
   </Entity>
-  <Relationship id="rel1" name="Utilizador_Tipo_Utilizador" sourceEntity="ent4" targetEntity="ent1">
-    <RelationshipRole1 id="rel1#role1" name="UtilizadorToTipo_Utilizador" maxCard="1"/>
-    <RelationshipRole2 id="rel1#role2" name="Tipo_UtilizadorToUtilizador" maxCard="N"/>
+  <Relationship id="rel2" name="Cidade_Estado" sourceEntity="ent2" targetEntity="ent9" db:database="db4" db:table="cidade">
+    <RelationshipRole1 id="rel2#role3" name="CidadeToEstado" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="id_cidade"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="EstadoToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent9#att9" name="estado_id_estado"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1030" gr:y="490" id="ent12" name="Continente" duration="persistent" attributeOrder="ent12#att36 ent12#att41">
-    <Attribute id="ent12#att36" key="true" name="Id_Continente" type="integer"/>
-    <Attribute id="ent12#att41" name="Descricao" type="string"/>
-  </Entity>
-  <Entity gr:x="800" gr:y="480" id="ent13" name="Coordenadas" duration="persistent" attributeOrder="ent13#att42 ent13#att43 ent13#att44 ent13#att45">
-    <Attribute id="ent13#att42" key="true" name="Id_Coordenadas" type="integer"/>
-    <Attribute id="ent13#att43" name="Latitute" type="string"/>
-    <Attribute id="ent13#att44" name="Longitude" type="string"/>
-    <Attribute id="ent13#att45" name="Altitude" type="string"/>
-  </Entity>
-  <Relationship id="rel2" name="Cidade_Estado" sourceEntity="ent2" targetEntity="ent9">
-    <RelationshipRole1 id="rel2#role3" name="CidadeToEstado" maxCard="1"/>
-    <RelationshipRole2 id="rel2#role4" name="EstadoToCidade" maxCard="N"/>
+  <Relationship id="rel3" name="Cidade_Moeda" sourceEntity="ent2" targetEntity="ent5" db:database="db4" db:table="cidade">
+    <RelationshipRole1 id="rel3#role5" name="CidadeToMoeda" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="id_cidade"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="MoedaToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent5#att5" name="moeda_id_moeda"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel3" name="Cidade_Moeda" sourceEntity="ent2" targetEntity="ent5">
-    <RelationshipRole1 id="rel3#role5" name="CidadeToMoeda" maxCard="1"/>
-    <RelationshipRole2 id="rel3#role6" name="MoedaToCidade" maxCard="N"/>
+  <Relationship id="rel4" name="Cidade_Pais" sourceEntity="ent2" targetEntity="ent6" db:database="db4" db:table="cidade">
+    <RelationshipRole1 id="rel4#role7" name="CidadeToPais" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="id_cidade"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="PaisToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent6#att6" name="pais_id_pais"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel4" name="Cidade_Pais" sourceEntity="ent2" targetEntity="ent6">
-    <RelationshipRole1 id="rel4#role7" name="CidadeToPais" maxCard="1"/>
-    <RelationshipRole2 id="rel4#role8" name="PaisToCidade" maxCard="N"/>
+  <Relationship id="rel6" name="Cidade_Lingua" sourceEntity="ent2" targetEntity="ent3" db:database="db4" db:table="cidade">
+    <RelationshipRole1 id="rel6#role11" name="CidadeToLingua" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="id_cidade"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="LinguaToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="lingua_id_lingua"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel6" name="Cidade_Lingua" sourceEntity="ent2" targetEntity="ent3">
-    <RelationshipRole1 id="rel6#role11" name="CidadeToLingua" maxCard="1"/>
-    <RelationshipRole2 id="rel6#role12" name="LinguaToCidade" maxCard="N"/>
+  <Relationship id="rel7" name="Cidade_Continente" sourceEntity="ent2" targetEntity="ent12" db:database="db4" db:table="cidade">
+    <RelationshipRole1 id="rel7#role13" name="CidadeToContinente" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="id_cidade"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="ContinenteToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent12#att36" name="continente_id_continente"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel7" name="Cidade_Continente" sourceEntity="ent2" targetEntity="ent12">
-    <RelationshipRole1 id="rel7#role13" name="CidadeToContinente" maxCard="1"/>
-    <RelationshipRole2 id="rel7#role14" name="ContinenteToCidade" maxCard="N"/>
+  <Relationship id="rel8" name="Cidade_Coordenadas" sourceEntity="ent2" targetEntity="ent13" db:database="db4" db:table="cidade">
+    <RelationshipRole1 id="rel8#role15" name="CidadeToCoordenadas" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="id_cidade"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="CoordenadasToCidade" maxCard="N">
+      <db:JoinColumn attribute="ent13#att42" name="coordenadas_id_coordenadas"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel8" name="Cidade_Coordenadas" sourceEntity="ent2" targetEntity="ent13">
-    <RelationshipRole1 id="rel8#role15" name="CidadeToCoordenadas" maxCard="1"/>
-    <RelationshipRole2 id="rel8#role16" name="CoordenadasToCidade" maxCard="N"/>
+  <Relationship id="rel10" name="Foto_Cidade" sourceEntity="ent11" targetEntity="ent2" db:database="db4" db:table="foto">
+    <RelationshipRole1 id="rel10#role19" name="FotoToCidade" maxCard="1">
+      <db:JoinColumn attribute="ent11#att30" name="id_foto"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="CidadeToFoto" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="cidade_id_cidade"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel9" name="Tipo_Utilizador_Foto" sourceEntity="ent1" targetEntity="ent11">
-    <RelationshipRole1 id="rel9#role17" name="Tipo_UtilizadorToFoto" maxCard="N"/>
-    <RelationshipRole2 id="rel9#role18" name="FotoToTipo_Utilizador" maxCard="1"/>
+  <Relationship id="rel11" name="Utilizador_Comentario" sourceEntity="User" targetEntity="ent8" db:database="db4" db:table="comentario">
+    <RelationshipRole1 id="rel11#role21" name="UtilizadorToComentario" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="ComentarioToUtilizador" maxCard="1">
+      <db:JoinColumn attribute="ent8#att8" name="id_comentario"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel10" name="Foto_Cidade" sourceEntity="ent11" targetEntity="ent2">
-    <RelationshipRole1 id="rel10#role19" name="FotoToCidade" maxCard="1"/>
-    <RelationshipRole2 id="rel10#role20" name="CidadeToFoto" maxCard="N"/>
+  <Relationship id="rel12" name="Utilizador_Rating" sourceEntity="User" targetEntity="ent7" db:database="db4" db:table="rating">
+    <RelationshipRole1 id="rel12#role23" name="UtilizadorToRating" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="RatingToUtilizador" maxCard="1">
+      <db:JoinColumn attribute="ent7#att7" name="id_utilizador"/>
+      <db:JoinColumn attribute="ent7#att48" name="id_cidade"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel11" name="Utilizador_Comentario" sourceEntity="ent4" targetEntity="ent8">
-    <RelationshipRole1 id="rel11#role21" name="UtilizadorToComentario" maxCard="N"/>
-    <RelationshipRole2 id="rel11#role22" name="ComentarioToUtilizador" maxCard="1"/>
+  <Relationship id="rel13" name="Rating_Cidade" sourceEntity="ent7" targetEntity="ent2" db:database="db4" db:table="rating">
+    <RelationshipRole1 id="rel13#role25" name="RatingToCidade" maxCard="1">
+      <db:JoinColumn attribute="ent7#att7" name="id_utilizador"/>
+      <db:JoinColumn attribute="ent7#att48" name="id_cidade"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel13#role26" name="CidadeToRating" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="cidade_id_cidade"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel12" name="Utilizador_Rating" sourceEntity="ent4" targetEntity="ent7">
-    <RelationshipRole1 id="rel12#role23" name="UtilizadorToRating" maxCard="N"/>
-    <RelationshipRole2 id="rel12#role24" name="RatingToUtilizador" maxCard="1"/>
+  <Relationship id="rel14" name="Comentario_Cidade" sourceEntity="ent8" targetEntity="ent2" gr:bendpoints="162,-149,-101,244" db:database="db4" db:table="comentario">
+    <RelationshipRole1 id="rel14#role27" name="ComentarioToCidade" maxCard="1">
+      <db:JoinColumn attribute="ent8#att8" name="id_comentario"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="CidadeToComentario" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="cidade_id_cidade"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel13" name="Rating_Cidade" sourceEntity="ent7" targetEntity="ent2">
-    <RelationshipRole1 id="rel13#role25" name="RatingToCidade" maxCard="1"/>
-    <RelationshipRole2 id="rel13#role26" name="CidadeToRating" maxCard="N"/>
+  <Relationship id="rel9" name="Foto_Utilizador" sourceEntity="ent11" targetEntity="User" db:database="db4" db:table="foto">
+    <RelationshipRole1 id="rel9#role17" name="FotoToUtilizador" maxCard="1">
+      <db:JoinColumn attribute="ent11#att30" name="id_foto"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="UtilizadorToFoto" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel14" name="Comentario_Cidade" sourceEntity="ent8" targetEntity="ent2" gr:bendpoints="372,-84,-161,249">
-    <RelationshipRole1 id="rel14#role27" name="ComentarioToCidade" maxCard="1"/>
-    <RelationshipRole2 id="rel14#role28" name="CidadeToComentario" maxCard="N"/>
-  </Relationship>
+  <db:Database id="db4" name="WebProject2" type="MySQL" url="jdbc:mysql://localhost/webproject" username="root"/>
 </DataModel>

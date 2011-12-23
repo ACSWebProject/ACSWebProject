@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DBMetaData driverMajorVersion="5" driverMinorVersion="1" driverVersion="mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )" productVersion="5.5.16-log" identifierQuoteString="`" transactionLevel="Repeatable read" driverName="MySQL-AB JDBC Driver" productName="MySQL">
+  <Table schema="" ignoreIndexes="false" name="cidade" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="comentario" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="continente" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="coordenadas" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="estado" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="foto" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="group" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="group_module" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="lingua" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="module" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="moeda" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="pais" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="rating" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="user" type="TABLE" refreshed="false"/>
+  <Table schema="" ignoreIndexes="false" name="user_group" type="TABLE" refreshed="false"/>
+</DBMetaData>

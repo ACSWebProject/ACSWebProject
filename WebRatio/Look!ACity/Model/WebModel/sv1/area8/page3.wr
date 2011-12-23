@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="316" gr:y="137" id="sv1#area8#page3" name="Galeria de Fotos">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area8#page3#inu1" name="Galeria de Fotos" entity="ent11" displayAttributes="ent11#att31 ent11#att32 ent11#att33 rel10#role19.ent2#att18" linkOrder="sv1#area8#page3#inu1#ln18">
+      <SortAttribute attribute="ent11#att33" order="descending"/>
+      <Selector id="sv1#area8#page3#inu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area8#page3#inu1#su4#acond2" name="FotosDaCidade" predicate="eq" booleanOperator="or" implied="false" attributes="ent11#att47"/>
+      </Selector>
+      <Link id="sv1#area8#page3#inu1#ln18" name="Remover Foto da Cidade" to="sv1#area8#dlu8" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-35,-134,-180,39"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area8#page3#inu1">
+          <layout:Link link="sv1#area8#page3#inu1#ln18"/>
+          <layout:Attribute attribute="ent11#att31"/>
+          <layout:Attribute attribute="ent11#att32"/>
+          <layout:Attribute attribute="ent11#att33"/>
+          <layout:Attribute attribute="rel10#role19.ent2#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

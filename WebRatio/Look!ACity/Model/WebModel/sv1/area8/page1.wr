@@ -1,0 +1,116 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="506" gr:y="137" id="sv1#area8#page1" name="Criar Cidade" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="244" gr:y="144" id="sv1#area8#page1#enu2" name="Criar Cidade" linkOrder="sv1#area8#page1#enu2#ln4">
+      <Field id="sv1#area8#page1#enu2#fld17" name="Nome" type="string" modifiable="true"/>
+      <Field id="sv1#area8#page1#enu2#fld18" name="Descricao" type="string" modifiable="true"/>
+      <Field id="sv1#area8#page1#enu2#fld19" name="Area" type="string" modifiable="true"/>
+      <Field id="sv1#area8#page1#enu2#fld20" name="Num_Habitantes" type="string" modifiable="true"/>
+      <Field id="sv1#area8#page1#enu2#fld21" name="Bandeira" type="string" modifiable="true"/>
+      <SelectionField id="sv1#area8#page1#enu2#sfld19" name="Continente" type="string"/>
+      <SelectionField id="sv1#area8#page1#enu2#sfld20" name="Coordenadas" type="string"/>
+      <SelectionField id="sv1#area8#page1#enu2#sfld21" name="Estado" type="string"/>
+      <SelectionField id="sv1#area8#page1#enu2#sfld22" name="Lingua" type="string"/>
+      <SelectionField id="sv1#area8#page1#enu2#sfld23" name="Moeda" type="string"/>
+      <SelectionField id="sv1#area8#page1#enu2#sfld24" name="Pais" type="string"/>
+      <Link id="sv1#area8#page1#enu2#ln4" name="Criar Cidade" to="sv1#area8#cru1" type="normal" validate="true">
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par1" name="Area_Area" source="sv1#area8#page1#enu2#fld19" target="sv1#area8#cru1.ent2#att20"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par2" name="Bandeira_Bandeira" source="sv1#area8#page1#enu2#fld21" target="sv1#area8#cru1.ent2#att37"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par3" name="Continente_Continente.Id_Continente(CidadeToContinente)" source="sv1#area8#page1#enu2#sfld19" target="sv1#area8#cru1.rel7#role13.ent12#att36"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par4" name="Coordenadas_Coordenadas.id_Coordenadas(CidadeToCoordenadas)" source="sv1#area8#page1#enu2#sfld20" target="sv1#area8#cru1.rel8#role15.ent13#att42"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par5" name="Descricao_Descricao" source="sv1#area8#page1#enu2#fld18" target="sv1#area8#cru1.ent2#att19"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par6" name="Estado_Estado.Id_Estado(CidadeToEstado)" source="sv1#area8#page1#enu2#sfld21" target="sv1#area8#cru1.rel2#role3.ent9#att9"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par7" name="Lingua_Lingua.Id_Lingua(CidadeToLingua)" source="sv1#area8#page1#enu2#sfld22" target="sv1#area8#cru1.rel6#role11.ent3#att3"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par8" name="Moeda_Moeda.Id_Moeda(CidadeToMoeda)" source="sv1#area8#page1#enu2#sfld23" target="sv1#area8#cru1.rel3#role5.ent5#att5"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par9" name="Nome_Nome" source="sv1#area8#page1#enu2#fld17" target="sv1#area8#cru1.ent2#att18"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par10" name="Num_Habitantes_Num_Habitantes" source="sv1#area8#page1#enu2#fld20" target="sv1#area8#cru1.ent2#att21"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par11" name="Pais_Pais.Id_Pais(CidadeToPais)" source="sv1#area8#page1#enu2#sfld24" target="sv1#area8#cru1.rel4#role7.ent6#att6"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par16" name="Continente_Id_Continente" source="sv1#area8#page1#enu2#sfld19" target="sv1#area8#cru1.ent2#att35"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par17" name="Coordenadas_Id_Coordenadas" source="sv1#area8#page1#enu2#sfld20" target="sv1#area8#cru1.ent2#att38"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par18" name="Estado_Id_Estado" source="sv1#area8#page1#enu2#sfld21" target="sv1#area8#cru1.ent2#att39"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par19" name="Lingua_Id_Lingua" source="sv1#area8#page1#enu2#sfld22" target="sv1#area8#cru1.ent2#att24"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par20" name="Moeda_Id_Moeda" source="sv1#area8#page1#enu2#sfld23" target="sv1#area8#cru1.ent2#att23"/>
+        <LinkParameter id="sv1#area8#page1#enu2#ln4#par21" name="Pais_Id_Pais" source="sv1#area8#page1#enu2#sfld24" target="sv1#area8#cru1.ent2#att22"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="76" id="sv1#area8#page1#seu1" name="Continente" entity="ent12">
+      <Link id="sv1#area8#page1#seu1#ln6" name="Continentes" to="sv1#area8#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area8#page1#seu1#ln6#par12" name="Descricao_Continente [label]" source="ent12#att41Array" target="sv1#area8#page1#enu2#sfld19_label"/>
+        <LinkParameter id="sv1#area8#page1#seu1#ln6#par13" name="Id_Continente_Continente [output]" source="ent12#att36Array" target="sv1#area8#page1#enu2#sfld19_output"/>
+        <LinkParameter id="sv1#area8#page1#seu1#ln6#par84" name="Id_Continente_Continente - Preselection" source="ent12#att36Array" target="sv1#area8#page1#enu2#sfld19_presel"/>
+      </Link>
+      <SortAttribute attribute="ent12#att41" order="ascending"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="4" gr:y="170" id="sv1#area8#page1#seu2" name="Lingua" entity="ent3">
+      <Link id="sv1#area8#page1#seu2#ln7" name="Linguas" to="sv1#area8#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area8#page1#seu2#ln7#par14" name="Nome_Lingua [label]" source="ent3#att17Array" target="sv1#area8#page1#enu2#sfld22_label"/>
+        <LinkParameter id="sv1#area8#page1#seu2#ln7#par15" name="Id_Lingua_Lingua [output]" source="ent3#att3Array" target="sv1#area8#page1#enu2#sfld22_output"/>
+        <LinkParameter id="sv1#area8#page1#seu2#ln7#par85" name="Id_Lingua_Lingua - Preselection" source="ent3#att3Array" target="sv1#area8#page1#enu2#sfld22_presel"/>
+      </Link>
+      <SortAttribute attribute="ent3#att17" order="ascending"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="4" gr:y="270" id="sv1#area8#page1#seu3" name="Coordenadas" entity="ent13">
+      <Link id="sv1#area8#page1#seu3#ln8" name="Coordenadas" to="sv1#area8#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area8#page1#seu3#ln8#par23" name="id_Coordenadas_Coordenadas [label]" source="ent13#att42Array" target="sv1#area8#page1#enu2#sfld20_label"/>
+        <LinkParameter id="sv1#area8#page1#seu3#ln8#par24" name="id_Coordenadas_Coordenadas [output]" source="ent13#att42Array" target="sv1#area8#page1#enu2#sfld20_output"/>
+        <LinkParameter id="sv1#area8#page1#seu3#ln8#par86" name="id_Coordenadas_Coordenadas - Preselection" source="ent13#att42Array" target="sv1#area8#page1#enu2#sfld20_presel"/>
+      </Link>
+      <SortAttribute attribute="ent13#att42" order="descending"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="104" gr:y="0" id="sv1#area8#page1#seu4" name="Estado" entity="ent9">
+      <Link id="sv1#area8#page1#seu4#ln9" name="Estados" to="sv1#area8#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area8#page1#seu4#ln9#par25" name="Descricao_Estado [label]" source="ent9#att25Array" target="sv1#area8#page1#enu2#sfld21_label"/>
+        <LinkParameter id="sv1#area8#page1#seu4#ln9#par26" name="Id_Estado_Estado [output]" source="ent9#att9Array" target="sv1#area8#page1#enu2#sfld21_output"/>
+        <LinkParameter id="sv1#area8#page1#seu4#ln9#par83" name="Id_Estado_Estado - Preselection" source="ent9#att9Array" target="sv1#area8#page1#enu2#sfld21_presel"/>
+      </Link>
+      <SortAttribute attribute="ent9#att25" order="ascending"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="114" gr:y="324" id="sv1#area8#page1#seu5" name="Moeda" entity="ent5">
+      <Link id="sv1#area8#page1#seu5#ln10" name="Moedas" to="sv1#area8#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area8#page1#seu5#ln10#par27" name="Nome_Moeda [label]" source="ent5#att16Array" target="sv1#area8#page1#enu2#sfld23_label"/>
+        <LinkParameter id="sv1#area8#page1#seu5#ln10#par28" name="Id_Moeda_Moeda [output]" source="ent5#att5Array" target="sv1#area8#page1#enu2#sfld23_output"/>
+        <LinkParameter id="sv1#area8#page1#seu5#ln10#par87" name="Id_Moeda_Moeda - Preselection" source="ent5#att5Array" target="sv1#area8#page1#enu2#sfld23_presel"/>
+      </Link>
+      <SortAttribute attribute="ent5#att16" order="ascending"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="274" gr:y="280" id="sv1#area8#page1#seu6" name="Pais" entity="ent6">
+      <Link id="sv1#area8#page1#seu6#ln11" name="Paises" to="sv1#area8#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area8#page1#seu6#ln11#par29" name="Nome_Pais [label]" source="ent6#att15Array" target="sv1#area8#page1#enu2#sfld24_label"/>
+        <LinkParameter id="sv1#area8#page1#seu6#ln11#par30" name="Id_Pais_Pais [output]" source="ent6#att6Array" target="sv1#area8#page1#enu2#sfld24_output"/>
+        <LinkParameter id="sv1#area8#page1#seu6#ln11#par88" name="Id_Pais_Pais - Preselection" source="ent6#att6Array" target="sv1#area8#page1#enu2#sfld24_presel"/>
+      </Link>
+      <SortAttribute attribute="ent6#att15" order="ascending"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area8#page1#enu2">
+          <layout:Link link="sv1#area8#page1#enu2#ln4"/>
+          <layout:Field field="sv1#area8#page1#enu2#fld17"/>
+          <layout:Field field="sv1#area8#page1#enu2#fld18"/>
+          <layout:Field field="sv1#area8#page1#enu2#fld19"/>
+          <layout:Field field="sv1#area8#page1#enu2#fld20"/>
+          <layout:Field field="sv1#area8#page1#enu2#fld21"/>
+          <layout:Field field="sv1#area8#page1#enu2#sfld19"/>
+          <layout:Field field="sv1#area8#page1#enu2#sfld20"/>
+          <layout:Field field="sv1#area8#page1#enu2#sfld21"/>
+          <layout:Field field="sv1#area8#page1#enu2#sfld22"/>
+          <layout:Field field="sv1#area8#page1#enu2#sfld23"/>
+          <layout:Field field="sv1#area8#page1#enu2#sfld24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

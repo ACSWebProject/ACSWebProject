@@ -1,0 +1,43 @@
+[20 Dez 2011 14:21:33] Building database metadata model
+[20 Dez 2011 14:21:33] Properties: {partialRefresh=true, processColumnsUsingSelect=, outputPath=C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, includePrimaryKeys=true, url=jdbc:mysql://localhost/webproject, eventSocketClient=com.webratio.commons.net.EventSocketClient@19c247a0, includeTables=true, username=root, tableRegex=null, outputLogPath=C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\DB.xml.log, includeForeignKeys=false, retrieveAllNames=true, readIndexes=null, driverClass=com.mysql.jdbc.Driver, tablesToRefresh=, eventSocketPort=4540, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider}
+[20 Dez 2011 14:21:33] URL: jdbc:mysql://localhost/webproject
+[20 Dez 2011 14:21:33] Product name: MySQL
+[20 Dez 2011 14:21:33] Product version: 5.5.16-log
+[20 Dez 2011 14:21:33] Driver name: MySQL-AB JDBC Driver
+[20 Dez 2011 14:21:33] Driver version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+[20 Dez 2011 14:21:33] Driver major version: 5
+[20 Dez 2011 14:21:33] Driver minor version: 1
+[20 Dez 2011 14:21:33] Identifier quote string: 1
+[20 Dez 2011 14:21:33] Retrieving schemas
+[20 Dez 2011 14:21:33] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[20 Dez 2011 14:21:33]   Found 'cidade' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'comentario' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'continente' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'coordenadas' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'estado' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'foto' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'group' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'group_module' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'lingua' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'module' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'moeda' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'pais' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'rating' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'user' [type = TABLE]
+[20 Dez 2011 14:21:33]   Found 'user_group' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'cidade' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'comentario' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'continente' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'coordenadas' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'estado' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'foto' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'group' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'lingua' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'module' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'moeda' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'pais' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'rating' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'user' [type = TABLE]
+[20 Dez 2011 14:21:33] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[20 Dez 2011 14:21:33] Database connection closed
