@@ -1,72 +1,27 @@
-[20 Dez 2011 14:21:25] DEBUG Executing SQL script
-[20 Dez 2011 14:21:25] INFO ================================================================================
-[20 Dez 2011 14:21:25] INFO outputPath= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\UpdateSQL.xml'
-[20 Dez 2011 14:21:25] INFO onError= 'continue'
-[20 Dez 2011 14:21:25] INFO statementSeparator= ';'
-[20 Dez 2011 14:21:25] INFO derby.system.home= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[20 Dez 2011 14:21:25] INFO password= ''
-[20 Dez 2011 14:21:25] INFO url= 'jdbc:mysql://localhost/webproject'
-[20 Dez 2011 14:21:25] INFO username= 'root'
-[20 Dez 2011 14:21:25] INFO autoCommit= 'false'
-[20 Dez 2011 14:21:25] INFO outputLogPath= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\UpdateSQL.xml.log'
-[20 Dez 2011 14:21:25] INFO driverClass= 'com.mysql.jdbc.Driver'
-[20 Dez 2011 14:21:25] INFO encoding= ''
-[20 Dez 2011 14:21:25] INFO eventSocketPort= '4537'
-[20 Dez 2011 14:21:25] INFO sqlScript= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\UpdateSQL.sql'
-[20 Dez 2011 14:21:25] INFO ================================================================================
-[20 Dez 2011 14:21:25] INFO Connecting to the Database...
-[20 Dez 2011 14:21:26] INFO Database connection estabilished
-[20 Dez 2011 14:21:26] INFO transaction isolation: 4
-[20 Dez 2011 14:21:26] DEBUG ================================================================================
-[20 Dez 2011 14:21:26] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\UpdateSQL.sql
-[20 Dez 2011 14:21:26] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), primary key (`oid`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `foto` ( `id_foto`  integer  not null, `url`  varchar(255), `descricao`  varchar(255), `data`  date, `id_utilizador`  integer, `id_cidade`  integer, primary key (`id_foto`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `continente` ( `id_continente`  integer  not null, `descricao`  varchar(255), primary key (`id_continente`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `coordenadas` ( `id_coordenadas`  integer  not null, `latitute`  varchar(255), `longitude`  varchar(255), `altitude`  varchar(255), primary key (`id_coordenadas`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `cidade` ( `id_cidade`  integer  not null, `nome`  varchar(255), `descricao`  varchar(255), `area`  varchar(255), `num_habitantes`  varchar(255), `id_pais`  integer, `id_moeda`  integer, `id_lingua`  integer, `id_continente`  integer, `bandeira`  varchar(255), `id_coordenadas`  integer, `id_estado`  integer, primary key (`id_cidade`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `lingua` ( `id_lingua`  integer  not null, `nome`  varchar(255), primary key (`id_lingua`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `moeda` ( `id_moeda`  integer  not null, `nome`  varchar(255), primary key (`id_moeda`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `pais` ( `id_pais`  integer  not null, `nome`  varchar(255), `bandeira`  varchar(255), primary key (`id_pais`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `rating` ( `id_utilizador`  integer  not null, `id_cidade`  integer  not null, `classificacao`  integer, primary key (`id_utilizador`, `id_cidade`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `comentario` ( `id_comentario`  integer  not null, `comentario`  varchar(255), `data`  date, `id_utilizador`  integer, `id_cidade`  integer, primary key (`id_comentario`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    create table `estado` ( `id_estado`  integer  not null, `descricao`  varchar(255), primary key (`id_estado`) )
-[20 Dez 2011 14:21:26] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
-[20 Dez 2011 14:21:27] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
-[20 Dez 2011 14:21:27] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
-[20 Dez 2011 14:21:27] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
-[20 Dez 2011 14:21:27] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
-[20 Dez 2011 14:21:27] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
-[20 Dez 2011 14:21:27] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
-[20 Dez 2011 14:21:27] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) )
-[20 Dez 2011 14:21:28] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
-[20 Dez 2011 14:21:28] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
-[20 Dez 2011 14:21:28] DEBUG Executing statement:    alter table `foto`  add column  `cidade_id_cidade`  integer
-[20 Dez 2011 14:21:28] DEBUG Executing statement:  alter table `foto`   add index fk_foto_cidade (`cidade_id_cidade`), add constraint fk_foto_cidade foreign key (`cidade_id_cidade`) references `cidade` (`id_cidade`)
-[20 Dez 2011 14:21:28] DEBUG Executing statement:    alter table `comentario`  add column  `user_oid`  integer
-[20 Dez 2011 14:21:29] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_user (`user_oid`), add constraint fk_comentario_user foreign key (`user_oid`) references `user` (`oid`)
-[20 Dez 2011 14:21:29] DEBUG Executing statement:    alter table `rating`  add column  `user_oid`  integer
-[20 Dez 2011 14:21:29] DEBUG Executing statement:  alter table `rating`   add index fk_rating_user (`user_oid`), add constraint fk_rating_user foreign key (`user_oid`) references `user` (`oid`)
-[20 Dez 2011 14:21:29] DEBUG Executing statement:    alter table `rating`  add column  `cidade_id_cidade`  integer
-[20 Dez 2011 14:21:29] DEBUG Executing statement:  alter table `rating`   add index fk_rating_cidade (`cidade_id_cidade`), add constraint fk_rating_cidade foreign key (`cidade_id_cidade`) references `cidade` (`id_cidade`)
-[20 Dez 2011 14:21:29] DEBUG Executing statement:    alter table `comentario`  add column  `cidade_id_cidade`  integer
-[20 Dez 2011 14:21:30] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_cidade (`cidade_id_cidade`), add constraint fk_comentario_cidade foreign key (`cidade_id_cidade`) references `cidade` (`id_cidade`)
-[20 Dez 2011 14:21:30] DEBUG Executing statement:    alter table `cidade`  add column  `estado_id_estado`  integer
-[20 Dez 2011 14:21:30] DEBUG Executing statement:  alter table `cidade`   add index fk_cidade_estado (`estado_id_estado`), add constraint fk_cidade_estado foreign key (`estado_id_estado`) references `estado` (`id_estado`)
-[20 Dez 2011 14:21:30] DEBUG Executing statement:    alter table `cidade`  add column  `moeda_id_moeda`  integer
-[20 Dez 2011 14:21:30] DEBUG Executing statement:  alter table `cidade`   add index fk_cidade_moeda (`moeda_id_moeda`), add constraint fk_cidade_moeda foreign key (`moeda_id_moeda`) references `moeda` (`id_moeda`)
-[20 Dez 2011 14:21:31] DEBUG Executing statement:    alter table `cidade`  add column  `pais_id_pais`  integer
-[20 Dez 2011 14:21:31] DEBUG Executing statement:  alter table `cidade`   add index fk_cidade_pais (`pais_id_pais`), add constraint fk_cidade_pais foreign key (`pais_id_pais`) references `pais` (`id_pais`)
-[20 Dez 2011 14:21:31] DEBUG Executing statement:    alter table `cidade`  add column  `lingua_id_lingua`  integer
-[20 Dez 2011 14:21:31] DEBUG Executing statement:  alter table `cidade`   add index fk_cidade_lingua (`lingua_id_lingua`), add constraint fk_cidade_lingua foreign key (`lingua_id_lingua`) references `lingua` (`id_lingua`)
-[20 Dez 2011 14:21:31] DEBUG Executing statement:    alter table `cidade`  add column  `continente_id_continente`  integer
-[20 Dez 2011 14:21:31] DEBUG Executing statement:  alter table `cidade`   add index fk_cidade_continente (`continente_id_continente`), add constraint fk_cidade_continente foreign key (`continente_id_continente`) references `continente` (`id_continente`)
-[20 Dez 2011 14:21:31] DEBUG Executing statement:    alter table `cidade`  add column  `coordenadas_id_coordenadas`  integer
-[20 Dez 2011 14:21:32] DEBUG Executing statement:  alter table `cidade`   add index fk_cidade_coordenadas (`coordenadas_id_coordenadas`), add constraint fk_cidade_coordenadas foreign key (`coordenadas_id_coordenadas`) references `coordenadas` (`id_coordenadas`)
-[20 Dez 2011 14:21:32] DEBUG Executing statement:    alter table `foto`  add column  `user_oid`  integer
-[20 Dez 2011 14:21:32] DEBUG Executing statement:  alter table `foto`   add index fk_foto_user (`user_oid`), add constraint fk_foto_user foreign key (`user_oid`) references `user` (`oid`)
-[20 Dez 2011 14:21:32] DEBUG ================================================================================
-[20 Dez 2011 14:21:32] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[20 Dez 2011 14:21:32] INFO Database connection closed
-[20 Dez 2011 14:21:32] DEBUG Total time: 6707 milliseconds
+[18 Jan 2012 10:11:09] DEBUG Executing SQL script
+[18 Jan 2012 10:11:09] INFO ================================================================================
+[18 Jan 2012 10:11:09] INFO outputPath= 'C:\Users\Fabio Silva\Dropbox\ACS_EW\Projecto\Look!ACity\.Temp~\UpdateSQL.xml'
+[18 Jan 2012 10:11:09] INFO onError= 'continue'
+[18 Jan 2012 10:11:09] INFO statementSeparator= ';'
+[18 Jan 2012 10:11:09] INFO derby.system.home= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[18 Jan 2012 10:11:09] INFO password= ''
+[18 Jan 2012 10:11:09] INFO url= 'jdbc:mysql://localhost/webproject'
+[18 Jan 2012 10:11:09] INFO username= 'root'
+[18 Jan 2012 10:11:09] INFO autoCommit= 'false'
+[18 Jan 2012 10:11:09] INFO outputLogPath= 'C:\Users\Fabio Silva\Dropbox\ACS_EW\Projecto\Look!ACity\.Temp~\UpdateSQL.xml.log'
+[18 Jan 2012 10:11:09] INFO driverClass= 'com.mysql.jdbc.Driver'
+[18 Jan 2012 10:11:09] INFO encoding= ''
+[18 Jan 2012 10:11:09] INFO eventSocketPort= '21297'
+[18 Jan 2012 10:11:09] INFO sqlScript= 'C:\Users\Fabio Silva\Dropbox\ACS_EW\Projecto\Look!ACity\.Temp~\UpdateSQL.sql'
+[18 Jan 2012 10:11:09] INFO ================================================================================
+[18 Jan 2012 10:11:09] INFO Connecting to the Database...
+[18 Jan 2012 10:11:09] INFO Database connection estabilished
+[18 Jan 2012 10:11:09] INFO transaction isolation: 4
+[18 Jan 2012 10:11:09] DEBUG ================================================================================
+[18 Jan 2012 10:11:09] DEBUG Executing SQL script file: C:\Users\Fabio Silva\Dropbox\ACS_EW\Projecto\Look!ACity\.Temp~\UpdateSQL.sql
+[18 Jan 2012 10:11:09] DEBUG Executing statement:  alter table `foto`  add column  `url`  varchar(255)
+[18 Jan 2012 10:11:10] DEBUG Executing statement:  alter table `foto`  add column  `urlblob`  longblob
+[18 Jan 2012 10:11:10] DEBUG ================================================================================
+[18 Jan 2012 10:11:10] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[18 Jan 2012 10:11:10] INFO Database connection closed
+[18 Jan 2012 10:11:10] DEBUG Total time: 902 milliseconds

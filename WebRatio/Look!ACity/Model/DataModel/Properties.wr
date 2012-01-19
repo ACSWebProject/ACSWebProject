@@ -89,13 +89,13 @@
     <Attribute id="ent9#att9" key="true" name="Id_Estado" type="integer" db:column="id_estado"/>
     <Attribute id="ent9#att25" name="Descricao" type="string" db:column="descricao"/>
   </Entity>
-  <Entity gr:x="320" gr:y="40" id="ent11" name="Foto" duration="persistent" attributeOrder="ent11#att30 ent11#att31 ent11#att32 ent11#att33 ent11#att46 ent11#att47" db:database="db4" db:table="foto">
+  <Entity gr:x="320" gr:y="40" id="ent11" name="Foto" duration="persistent" attributeOrder="ent11#att30 ent11#att32 ent11#att33 ent11#att46 ent11#att47 ent11#att11" db:database="db4" db:table="foto">
     <Attribute id="ent11#att30" key="true" name="Id_Foto" type="integer" db:column="id_foto"/>
-    <Attribute id="ent11#att31" name="URL" type="string" db:column="url"/>
     <Attribute id="ent11#att32" name="Descricao" type="string" db:column="descricao"/>
     <Attribute id="ent11#att33" name="Data" type="date" db:column="data"/>
     <Attribute id="ent11#att46" name="Id_utilizador" type="integer" db:column="id_utilizador"/>
     <Attribute id="ent11#att47" name="Id_Cidade" type="integer" db:column="id_cidade"/>
+    <Attribute id="ent11#att11" name="Url" type="blob" db:column="url" db:blobColumn="urlblob" storageType="database"/>
   </Entity>
   <Entity gr:x="790" gr:y="500" id="ent12" name="Continente" duration="persistent" attributeOrder="ent12#att36 ent12#att41" db:database="db4" db:table="continente">
     <Attribute id="ent12#att36" key="true" name="Id_Continente" type="integer" db:column="id_continente"/>

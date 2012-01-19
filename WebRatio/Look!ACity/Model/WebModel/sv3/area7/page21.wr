@@ -1,8 +1,26 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area7#page21" name="Home ">
-  <ContentUnits/>
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#area7#page21#mssu1" name="Bem-Vindo" customDescriptor="false">
+      <Message xml:space="preserve">Seja bem-vindo ao Look!ACity!
+
+
+Aqui vais poder encontrar toda a informa&#231;&#227;o que necessitas sobre a cidade que pretendes visitar.
+
+
+Podes ainda partilhar a tua opini&#227;o com outros utilizadores e as tuas fotos.
+
+
+Se j&#225; estas registado, faz o login acima, para garantires acesso a toda a informa&#231;&#227;o.
+
+
+Se te quiseres registrar, pode tamb&#233;m criar uma nova conta acima.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
   <layout:Grid>
     <layout:Row>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area7#page21#mssu1"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Warnings> 
+  <Warning xpath="id('db4')" rootXPath="/WebProject/DataModel" key="DISCONNECTED_DATABASE" tab="mapping" label="WebProject2"> 
+    <Message>The database 'WebProject2' is not connected: unable to perform a deep analysis</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RefreshDatabaseResolutionGenerator">Refresh the database</Resolution> 
+  </Warning>  
   <Warning xpath="id('sv2#area4#page15#dau2#ln32#par116')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="Id_Cidade_PASSING"> 
     <Message>The passing parameter 'Id_Cidade_PASSING' is declared but never used</Message>  
     <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#area4#page15#dau2#ln32#par116'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv3#area11#page26#enu5#ln40')" rootXPath="id('sv3')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="Registo"> 
+    <Message>Neither explicit nor implicit parameters' couplings could be found for the link 'Registo'</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv1#area6#lou1')" rootXPath="id('sv1')" error="false" label="Logout" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Logout'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#area5#lou2')" rootXPath="id('sv2')" error="false" label="Logout" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Logout'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv3#area11#cnu1')" rootXPath="id('sv3')" error="false" label="Conectar ao Grupo" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Conectar ao Grupo'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv3#area11#lgu2')" rootXPath="id('sv3')" error="false" label="Login" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'Login'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv1#area2#page12#inu4#su21#acond9')" rootXPath="id('sv1')" key="NOT_EQUAL_PREDICATE_WITH_OR" label="NaoAdmin"> 
+    <Message>Invalid combination of predicate 'Not Equal' and boolean operator 'Or' for the condition 'NaoAdmin'</Message>  
+    <Resolution message="Set boolean operator to 'and'" class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="booleanOperator" value="and">Set boolean operator to 'and'</Resolution> 
   </Warning> 
 </Warnings>

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="276" gr:y="29" id="sv2#area4#page18" name="Galeria de Fotos">
   <ContentUnits>
-    <MultiDataUnit gr:x="0" gr:y="0" id="sv2#area4#page18#mdu1" name="Galeria de Fotos" entity="ent11" displayAttributes="ent11#att31 ent11#att32 ent11#att33">
+    <MultiDataUnit gr:x="0" gr:y="0" id="sv2#area4#page18#mdu1" name="Galeria de Fotos" entity="ent11" displayAttributes="ent11#att32 ent11#att33 ent11#att11">
       <Selector id="sv2#area4#page18#mdu1#su19" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#area4#page18#mdu1#su19#acond11" name="Cidade" predicate="eq" booleanOperator="or" implied="false" attributes="ent11#att47"/>
       </Selector>
@@ -11,16 +11,11 @@
     <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area4#page18#mdu1">
-          <layout:Attribute attribute="ent11#att31"/>
           <layout:Attribute attribute="ent11#att32"/>
           <layout:Attribute attribute="ent11#att33"/>
+          <layout:Attribute attribute="ent11#att11"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

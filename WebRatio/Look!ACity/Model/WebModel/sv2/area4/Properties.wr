@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="606" gr:y="33" id="sv2#area4" name="Consultar Cidade" landmark="false" defaultPage="sv2#area4#page15">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="606" gr:y="33" id="sv2#area4" name="Consultar Cidade" landmark="false" defaultPage="sv2#area4#page15" protected="false">
   <OperationUnits>
     <CreateUnit gr:x="496" gr:y="219" id="sv2#area4#cru2" name="Adicionar Foto" entity="ent11">
       <OKLink id="sv2#area4#cru2#oln13" name="AdicionarFotoSucesso" to="sv2#area4#page18#mdu1">

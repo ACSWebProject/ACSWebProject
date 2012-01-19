@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1000" gr:y="220" id="sv1#area1" name="Gest&#227;o de Coment&#225;rios" landmark="true" defaultPage="sv1#area1#page7">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1000" gr:y="220" id="sv1#area1" name="Gest&#227;o de Coment&#225;rios" landmark="true" defaultPage="sv1#area1#page7" protected="false">
   <OperationUnits>
     <DeleteUnit gr:x="0" gr:y="166" id="sv1#area1#dlu1" name="Remover Comentario" entity="ent8">
       <Selector id="sv1#area1#dlu1#su2" defaultPolicy="fill" booleanOperator="and">
