@@ -1,0 +1,47 @@
+[19 Dez 2011 10:50:51] DEBUG Executing SQL script
+[19 Dez 2011 10:50:51] INFO ================================================================================
+[19 Dez 2011 10:50:51] INFO outputPath= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\SQL.xml'
+[19 Dez 2011 10:50:51] INFO onError= 'abort'
+[19 Dez 2011 10:50:51] INFO statementSeparator= ';'
+[19 Dez 2011 10:50:51] INFO derby.system.home= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[19 Dez 2011 10:50:51] INFO password= '1234567'
+[19 Dez 2011 10:50:51] INFO url= 'jdbc:derby://localhost:1527/WebProject;create=true'
+[19 Dez 2011 10:50:51] INFO username= 'Bruno'
+[19 Dez 2011 10:50:51] INFO autoCommit= 'false'
+[19 Dez 2011 10:50:51] INFO outputLogPath= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\.Temp~\SQL.xml.log'
+[19 Dez 2011 10:50:51] INFO driverClass= 'org.apache.derby.jdbc.ClientDriver'
+[19 Dez 2011 10:50:51] INFO encoding= ''
+[19 Dez 2011 10:50:51] INFO eventSocketPort= '3183'
+[19 Dez 2011 10:50:51] INFO sqlScript= 'C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\DBScripts\insert.sql'
+[19 Dez 2011 10:50:51] INFO ================================================================================
+[19 Dez 2011 10:50:51] INFO Connecting to the Database...
+[19 Dez 2011 10:50:52] INFO Database connection estabilished
+[19 Dez 2011 10:50:52] INFO transaction isolation: 2
+[19 Dez 2011 10:50:52] DEBUG ================================================================================
+[19 Dez 2011 10:50:52] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\Look!ACity\DBScripts\insert.sql
+[19 Dez 2011 10:50:52] DEBUG Executing statement:  INSERT INTO "APP.PAIS" VALUES (1,'PORTUGAL','URL BANDEIRA PT')
+[19 Dez 2011 10:50:52] ERROR Could not execute statement:  INSERT INTO "APP.PAIS" VALUES (1,'PORTUGAL','URL BANDEIRA PT')
+java.sql.SQLSyntaxErrorException: Schema 'BRUNO' does not exist
+	at org.apache.derby.client.am.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.Statement.execute(Unknown Source)
+	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
+	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
+	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
+Caused by: org.apache.derby.client.am.SqlException: Schema 'BRUNO' does not exist
+	at org.apache.derby.client.am.Statement.completeSqlca(Unknown Source)
+	at org.apache.derby.client.am.Statement.completeExecuteImmediate(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.parseEXCSQLIMMreply(Unknown Source)
+	at org.apache.derby.client.net.NetStatementReply.readExecuteImmediate(Unknown Source)
+	at org.apache.derby.client.net.StatementReply.readExecuteImmediate(Unknown Source)
+	at org.apache.derby.client.net.NetStatement.readExecuteImmediate_(Unknown Source)
+	at org.apache.derby.client.am.Statement.readExecuteImmediate(Unknown Source)
+	at org.apache.derby.client.am.Statement.flowExecute(Unknown Source)
+	at org.apache.derby.client.am.Statement.executeX(Unknown Source)
+	... 4 more
+[19 Dez 2011 10:50:52] DEBUG Performing roolback...
+[19 Dez 2011 10:50:52] WARN NOTE: The rollback affects the DDL instructions only if supported by the current database
+[19 Dez 2011 10:50:52] DEBUG Rollback successfully executed
+[19 Dez 2011 10:50:52] ERROR SQL SCRIPT EXECUTION FAILED
+[19 Dez 2011 10:50:52] INFO Database connection closed
+[19 Dez 2011 10:50:52] DEBUG Total time: 1200 milliseconds

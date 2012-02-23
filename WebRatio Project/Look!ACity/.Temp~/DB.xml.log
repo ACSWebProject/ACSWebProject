@@ -1,0 +1,193 @@
+[18 Jan 2012 11:20:40] Building database metadata model
+[18 Jan 2012 11:20:40] Properties: {partialRefresh=false, processColumnsUsingSelect=, outputPath=C:\Users\Fabio Silva\Dropbox\ACS_EW\Projecto\Look!ACity\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=C:\WebRatio\WebRatio Personal 6.1.1.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby, includePrimaryKeys=true, url=jdbc:mysql://localhost/webproject, eventSocketClient=com.webratio.commons.net.EventSocketClient@365474b4, includeTables=true, username=root, tableRegex=null, outputLogPath=C:\Users\Fabio Silva\Dropbox\ACS_EW\Projecto\Look!ACity\.Temp~\DB.xml.log, includeForeignKeys=true, retrieveAllNames=false, readIndexes=null, driverClass=com.mysql.jdbc.Driver, tablesToRefresh=, eventSocketPort=22470, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider}
+[18 Jan 2012 11:20:40] URL: jdbc:mysql://localhost/webproject
+[18 Jan 2012 11:20:40] Product name: MySQL
+[18 Jan 2012 11:20:40] Product version: 5.5.16
+[18 Jan 2012 11:20:40] Driver name: MySQL-AB JDBC Driver
+[18 Jan 2012 11:20:40] Driver version: mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )
+[18 Jan 2012 11:20:40] Driver major version: 5
+[18 Jan 2012 11:20:40] Driver minor version: 1
+[18 Jan 2012 11:20:40] Identifier quote string: 1
+[18 Jan 2012 11:20:40] Retrieving schemas
+[18 Jan 2012 11:20:40] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[18 Jan 2012 11:20:40]   Found 'cidade' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'comentario' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'continente' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'coordenadas' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'estado' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'foto' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'group' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'group_module' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'lingua' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'module' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'moeda' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'pais' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'rating' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'user' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found 'user_group' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving columns for 'cidade' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_cidade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: descricao [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: area [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: num_habitantes [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_pais [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_moeda [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_lingua [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_continente [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: bandeira [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_coordenadas [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_estado [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: estado_id_estado [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: moeda_id_moeda [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: pais_id_pais [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: lingua_id_lingua [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: continente_id_continente [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: coordenadas_id_coordenadas [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'cidade' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_cidade
+[18 Jan 2012 11:20:40] Retrieving columns for 'comentario' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_comentario [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: comentario [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: data [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_utilizador [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_cidade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: cidade_id_cidade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'comentario' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_comentario
+[18 Jan 2012 11:20:40] Retrieving columns for 'continente' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_continente [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: descricao [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'continente' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_continente
+[18 Jan 2012 11:20:40] Retrieving columns for 'coordenadas' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_coordenadas [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: latitute [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: longitude [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: altitude [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'coordenadas' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_coordenadas
+[18 Jan 2012 11:20:40] Retrieving columns for 'estado' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_estado [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: descricao [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'estado' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_estado
+[18 Jan 2012 11:20:40] Retrieving columns for 'foto' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_foto [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: descricao [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: data [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_utilizador [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_cidade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: cidade_id_cidade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: url [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: urlblob [type = LONGBLOB][SQL/XOPEN type = -4][size = 2147483647][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'foto' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_foto
+[18 Jan 2012 11:20:40] Retrieving columns for 'group' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'group' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: oid
+[18 Jan 2012 11:20:40] Retrieving columns for 'group_module' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'group_module' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: group_oid
+[18 Jan 2012 11:20:40]   Found primary key column: module_oid
+[18 Jan 2012 11:20:40] Retrieving columns for 'lingua' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_lingua [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'lingua' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_lingua
+[18 Jan 2012 11:20:40] Retrieving columns for 'module' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'module' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: oid
+[18 Jan 2012 11:20:40] Retrieving columns for 'moeda' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_moeda [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'moeda' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_moeda
+[18 Jan 2012 11:20:40] Retrieving columns for 'pais' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_pais [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: nome [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: bandeira [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'pais' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_pais
+[18 Jan 2012 11:20:40] Retrieving columns for 'rating' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: id_utilizador [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: id_cidade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: classificacao [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: cidade_id_cidade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'rating' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: id_utilizador
+[18 Jan 2012 11:20:40]   Found primary key column: id_cidade
+[18 Jan 2012 11:20:40] Retrieving columns for 'user' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'user' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: oid
+[18 Jan 2012 11:20:40] Retrieving columns for 'user_group' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[18 Jan 2012 11:20:40] Retrieving primary keys for 'user_group' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found primary key column: user_oid
+[18 Jan 2012 11:20:40]   Found primary key column: group_oid
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'cidade' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column continente_id_continente references continente(id_continente)
+[18 Jan 2012 11:20:40]   Found foreign key: column coordenadas_id_coordenadas references coordenadas(id_coordenadas)
+[18 Jan 2012 11:20:40]   Found foreign key: column estado_id_estado references estado(id_estado)
+[18 Jan 2012 11:20:40]   Found foreign key: column lingua_id_lingua references lingua(id_lingua)
+[18 Jan 2012 11:20:40]   Found foreign key: column moeda_id_moeda references moeda(id_moeda)
+[18 Jan 2012 11:20:40]   Found foreign key: column pais_id_pais references pais(id_pais)
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'comentario' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column cidade_id_cidade references cidade(id_cidade)
+[18 Jan 2012 11:20:40]   Found foreign key: column user_oid references user(oid)
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'continente' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'coordenadas' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'estado' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'foto' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column cidade_id_cidade references cidade(id_cidade)
+[18 Jan 2012 11:20:40]   Found foreign key: column user_oid references user(oid)
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'group' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column module_oid references module(oid)
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'group_module' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column group_oid references group(oid)
+[18 Jan 2012 11:20:40]   Found foreign key: column module_oid references module(oid)
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'lingua' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'module' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'moeda' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'pais' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'rating' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column cidade_id_cidade references cidade(id_cidade)
+[18 Jan 2012 11:20:40]   Found foreign key: column user_oid references user(oid)
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'user' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column group_oid references group(oid)
+[18 Jan 2012 11:20:40] Retrieving foreign keys for 'user_group' [type = TABLE]
+[18 Jan 2012 11:20:40]   Found foreign key: column group_oid references group(oid)
+[18 Jan 2012 11:20:40]   Found foreign key: column user_oid references user(oid)
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'cidade' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'comentario' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'continente' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'coordenadas' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'estado' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'foto' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'group' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'lingua' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'module' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'moeda' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'pais' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'rating' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'user' [type = TABLE]
+[18 Jan 2012 11:20:40] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[18 Jan 2012 11:20:41] Database connection closed

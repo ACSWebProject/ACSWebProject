@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LookACity.master.cs" Inherits="LookACity" %>
+
+<%@ Register Src="AjaxControlToolkit/All.ascx" TagName="All" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Look!ACity</title>
+    <link rel="stylesheet" type="text/css" href="~/css/html.css" media="screen, projection, tv " />
+    <link rel="stylesheet" type="text/css" href="~/css/layout.css" media="screen, projection, tv" />
+    <link rel="stylesheet" type="text/css" href="~/css/print.css" media="print" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- CONTENT: Holds all site content except for the footer.  This is what causes the footer to stick to the bottom -->
+    <div id="content">
+        <!-- HEADER: Holds title, subtitle and header images -->
+        <div id="header">
+            <div id="title">
+                <h1>
+                    Look!ACity</h1>
+                <h2>
+                    now</h2>
+            </div>
+            <img src="images/bg/balloons.gif" alt="balloons" class="balloons" />
+            <img src="images/bg/header_left.jpg" alt="left slice" class="left" />
+            <img src="images/bg/header_right.jpg" alt="right slice" class="right" />
+            <div class="fball">
+                <uc1:All ID="All1" runat="server" />
+            </div>
+            <%--<img src="images/Logo.png" alt="logo" class="logo" />--%>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+        </div>
+        <!-- MAIN MENU: Top horizontal menu of the site.  Use class="here" to turn the current page tab on -->
+        <div id="mainMenu">
+            <ul class="floatRight">
+                <li><a href="Default.aspx" title="HomePage">Home</a></li>
+                <li><a href="About.aspx" title="Informação sobre nós">Sobre Nós</a></li>
+            </ul>
+        </div>
+        <!-- PAGE CONTENT BEGINS: This is where you would define the columns (number, width and alignment) -->
+        <div id="page">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <!-- FOOTER: Site footer for links, copyright, etc. -->
+    <div id="footer">
+        <div id="width">
+            <span class="floatLeft">design <a href="About.aspx" title="Goto Home Page">Look!ACity</a></span>
+            <span class="floatRight"><a href="Default.aspx" title="Introduction">home</a> <span
+                class="grey">|</span> <a href="About.aspx" title="Sobre nós">sobre nós</a> <span
+                    class="grey">|</span> <a href="mailto:pg19834@alunos.uminho.pt" title="Get in touch">mail</a> <span class="grey">|</span> <a href="mailto:pg19834@alunos.uminho.pt?Subject=LookACity - Sugestões"
+                            title="Get in touch">sugestões</a></span>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area8" name="Gest&#227;o de Cidades" defaultPage="sv1#area8#page9" landmark="true" gr:x="32" gr:y="-189" landmarks="sv1#area8#page1" protected="false">
+  <OperationUnits>
+    <CreateUnit gr:x="606" gr:y="737" id="sv1#area8#cru1" name="Criar Cidade" entity="ent2">
+      <OKLink id="sv1#area8#cru1#oln1" name="CriarCidadeSucesso" to="sv1#area8#page9" automaticCoupling="true" gr:bendpoints="-93,57,351,590;-492,31,-48,564"/>
+      <KOLink id="sv1#area8#cru1#kln1" name="CriarCidadeInsucesso" to="sv1#area8#page2" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="290" gr:y="691" id="sv1#area8#mfu1" name="Modificar Cidade" entity="ent2">
+      <Selector id="sv1#area8#mfu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area8#mfu1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area8#mfu1#oln2" name="ModificarSucesso" to="sv1#area8#page9" automaticCoupling="true" gr:bendpoints="-135,-71,32,399"/>
+      <KOLink id="sv1#area8#mfu1#kln2" name="ModificarInsucesso" to="sv1#area8#page2" automaticCoupling="true" gr:bendpoints="241,-20,-167,-82"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="0" gr:y="299" id="sv1#area8#dlu3" name="Remover Cidade" entity="ent2">
+      <Selector id="sv1#area8#dlu3#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area8#dlu3#su6#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="sv1#area8#dlu3#kln5" name="RemoverCidadeInsucesso" to="sv1#area8#page2" automaticCoupling="true" gr:bendpoints="203,274,-503,-116"/>
+      <Link id="sv1#area8#dlu3#ln16" name="RemoverComentariosCidade" to="sv1#area8#dlu4" type="transport" validate="true">
+        <LinkParameter id="sv1#area8#dlu3#ln16#par71" name="Id_Cidade_PASSING_Cidade" sourceLinkParameter="sv1#area8#page9#inu6#ln15#par35" target="sv1#area8#dlu4#su7#acond4"/>
+      </Link>
+      <OKLink id="sv1#area8#dlu3#oln6" name="RemoverCidadeSucesso" to="sv1#area8#dlu4" gr:bendpoints="-13,66,-18,-64">
+        <LinkParameter id="sv1#area8#dlu3#oln6#par72" name="Id_Cidade_PASSING_Cidade" sourceLinkParameter="sv1#area8#page9#inu6#ln15#par35" target="sv1#area8#dlu4#su7#acond4"/>
+        <LinkParameter id="sv1#area8#dlu3#oln6#par73" name="Id_Cidade_PASSING" sourceLinkParameter="sv1#area8#page9#inu6#ln15#par35" passing="true"/>
+      </OKLink>
+    </DeleteUnit>
+    <DeleteUnit gr:x="0" gr:y="469" id="sv1#area8#dlu4" name="Cometarios da Cidade" entity="ent8">
+      <Selector id="sv1#area8#dlu4#su7" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area8#dlu4#su7#acond4" name="Cidade" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att50"/>
+      </Selector>
+      <OKLink id="sv1#area8#dlu4#oln7" name="RemoverComentariosSucesso" to="sv1#area8#dlu5">
+        <LinkParameter id="sv1#area8#dlu4#oln7#par74" name="Id_Cidade_PASSING" sourceLinkParameter="sv1#area8#dlu3#oln6#par73" passing="true"/>
+        <LinkParameter id="sv1#area8#dlu4#oln7#par75" name="Id_Cidade_PASSING_AttCondition6" sourceLinkParameter="sv1#area8#dlu3#oln6#par73" target="sv1#area8#dlu5#su8#acond6"/>
+      </OKLink>
+      <KOLink id="sv1#area8#dlu4#kln6" name="RemoverComentariosInsucesso" to="sv1#area8#page2" automaticCoupling="true" gr:bendpoints="239,117,-462,-103;668,123,-33,-97"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="10" gr:y="599" id="sv1#area8#dlu5" name="Fotos da Cidade" entity="ent11">
+      <Selector id="sv1#area8#dlu5#su8" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area8#dlu5#su8#acond6" name="Cidade" predicate="eq" booleanOperator="or" implied="false" attributes="ent11#att47"/>
+      </Selector>
+      <OKLink id="sv1#area8#dlu5#oln8" name="RemoverFotosSucesso" to="sv1#area8#dlu6">
+        <LinkParameter id="sv1#area8#dlu5#oln8#par81" name="Id_Cidade_PASSING_Cidade" sourceLinkParameter="sv1#area8#dlu4#oln7#par74" target="sv1#area8#dlu6#su10#acond7"/>
+      </OKLink>
+      <KOLink id="sv1#area8#dlu5#kln7" name="RemoverFotosInsucesso" to="sv1#area8#page2" automaticCoupling="true" gr:bendpoints="376,-4,-327,-94"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="0" gr:y="749" id="sv1#area8#dlu6" name="Rating da Cidade" entity="ent7">
+      <Selector id="sv1#area8#dlu6#su10" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area8#dlu6#su10#acond7" name="Cidade" predicate="eq" booleanOperator="or" implied="false" attributes="ent7#att48"/>
+      </Selector>
+      <KOLink id="sv1#area8#dlu6#kln8" name="RemoverRatingInsucesso" to="sv1#area8#page2" automaticCoupling="true" gr:bendpoints="682,41,-31,101"/>
+      <OKLink id="sv1#area8#dlu6#oln10" name="RemoverRatingSucesso" to="sv1#area8#page9" automaticCoupling="true" gr:bendpoints="171,-206,33,386"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="460" gr:y="0" id="sv1#area8#dlu8" name="Remover Fotos Cidade" entity="ent11">
+      <Selector id="sv1#area8#dlu8#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area8#dlu8#su12#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area8#dlu8#oln9" name="RemoverFotoCidadeSucesso" to="sv1#area8#page3" automaticCoupling="true"/>
+      <KOLink id="sv1#area8#dlu8#kln10" name="RemoverFotoCidadeInsucesso" to="sv1#area8#page2" automaticCoupling="true" gr:bendpoints="353,74,103,-615;351,635,101,-54"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="20" gr:y="1" id="sv1#area8#dlu9" name="Remove Coment&#225;rios da Cidade" entity="ent8">
+      <Selector id="sv1#area8#dlu9#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area8#dlu9#su13#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#area8#dlu9#oln11" name="RemoverComentarioCidadeSucesso" to="sv1#area8#page4" automaticCoupling="true" gr:bendpoints="-79,194,-352,-128"/>
+      <KOLink id="sv1#area8#dlu9#kln11" name="RemoverComentarioCidadeInsucesso" to="sv1#area8#page2" automaticCoupling="true" gr:bendpoints="460,64,-205,-624;768,47,103,-641;773,605,108,-83"/>
+    </DeleteUnit>
+  </OperationUnits>
+</Area>

@@ -1,0 +1,11 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area9" name="Gest&#227;o de Fotos" defaultPage="sv1#area9#page10" landmark="true" gr:x="990" gr:y="-190" protected="false">
+  <OperationUnits>
+    <DeleteUnit id="sv1#area9#dlu7" name="Remover Foto" gr:x="12" gr:y="202" entity="ent11">
+      <Selector id="sv1#area9#dlu7#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area9#dlu7#su9#kcond8" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="sv1#area9#dlu7#kln3" name="RemoverInsucesso" to="sv1#area9#page11" automaticCoupling="true"/>
+      <OKLink id="sv1#area9#dlu7#oln3" name="RemoverSucesso" to="sv1#area9#page10" automaticCoupling="true" gr:bendpoints="-35,-82,-46,100"/>
+    </DeleteUnit>
+  </OperationUnits>
+</Area>

@@ -1,0 +1,41 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="606" gr:y="33" id="sv2#area4" name="Consultar Cidade" landmark="false" defaultPage="sv2#area4#page15" protected="false">
+  <OperationUnits>
+    <CreateUnit gr:x="496" gr:y="219" id="sv2#area4#cru2" name="Adicionar Foto" entity="ent11">
+      <OKLink id="sv2#area4#cru2#oln13" name="AdicionarFotoSucesso" to="sv2#area4#page18#mdu1">
+        <LinkParameter id="sv2#area4#cru2#oln13#par101" name="Id_Cidade_Cidade" source="ent11#att47Array" target="sv2#area4#page18#mdu1#su19#acond11"/>
+      </OKLink>
+      <KOLink id="sv2#area4#cru2#kln13" name="AdicionarFotoInsucesso" to="sv2#area4#page20" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="396" gr:y="419" id="sv2#area4#cru5" name="Gravar Coment&#225;rio" entity="ent8">
+      <KOLink id="sv2#area4#cru5#kln20" name="ComentarioInsucesso" to="sv2#area4#page20" automaticCoupling="true"/>
+      <OKLink id="sv2#area4#cru5#oln20" name="ComentarioSucesso" to="sv2#area4#page15#dau2" gr:bendpoints="-113,-120,250,196;-134,-224,229,92"/>
+    </CreateUnit>
+    <GetUnit gr:x="226" gr:y="419" id="sv2#area4#gtu2" name="ObterUtilizador" contextParameters="UserCtxParam" linkOrder="sv2#area4#gtu2#ln38 sv2#area4#gtu2#ln24 sv2#area4#gtu2#ln36">
+      <Link id="sv2#area4#gtu2#ln38" name="Link38" to="sv2#area4#cru2" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#gtu2#ln38#par102" name="UserCtxParam.oid_Id_utilizador" source="sv2#area4#gtu2.UserCtxParam" target="sv2#area4#cru2.ent11#att46"/>
+        <LinkParameter id="sv2#area4#gtu2#ln38#par107" name="UserCtxParam.oid_User.oid(FotoToUtilizador)" source="sv2#area4#gtu2.UserCtxParam" target="sv2#area4#cru2.rel9#role17.userOID"/>
+      </Link>
+      <Link id="sv2#area4#gtu2#ln24" name="Link24" to="sv2#area4#cru5" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#gtu2#ln24#par104" name="UserCtxParam.oid_Id_Utilizador" source="sv2#area4#gtu2.UserCtxParam" target="sv2#area4#cru5.ent8#att28"/>
+        <LinkParameter id="sv2#area4#gtu2#ln24#par106" name="UserCtxParam.oid_User.oid(ComentarioToUtilizador)" source="sv2#area4#gtu2.UserCtxParam" target="sv2#area4#cru5.rel11#role22.userOID"/>
+      </Link>
+      <Link id="sv2#area4#gtu2#ln36" name="Link36" to="sv2#area4#cru3" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#gtu2#ln36#par108" name="UserCtxParam.oid_Id_Utilizador" source="sv2#area4#gtu2.UserCtxParam" target="sv2#area4#cru3.ent7#att7"/>
+        <LinkParameter id="sv2#area4#gtu2#ln36#par115" name="UserCtxParam.oid_User.oid(RatingToUtilizador)" source="sv2#area4#gtu2.UserCtxParam" target="sv2#area4#cru3.rel12#role24.userOID"/>
+      </Link>
+    </GetUnit>
+    <SetUnit gr:x="62" gr:y="408" id="sv2#area4#stu1" name="GuardarCidade" contextParameters="ctx1"/>
+    <GetUnit gr:x="546" gr:y="409" id="sv2#area4#gtu1" name="ObterCidade" contextParameters="ctx1" linkOrder="sv2#area4#gtu1#ln26">
+      <Link id="sv2#area4#gtu1#ln26" name="Link26" to="sv2#area4#cru2" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#gtu1#ln26#par91" name="Cidade.Id_Cidade_Cidade.Id_Cidade(FotoToCidade)" source="sv2#area4#gtu1.ctx1.ent2#att2" target="sv2#area4#cru2.rel10#role19.ent2#att2"/>
+        <LinkParameter id="sv2#area4#gtu1#ln26#par92" name="Cidade.Id_Cidade_Id_Cidade" source="sv2#area4#gtu1.ctx1.ent2#att2" target="sv2#area4#cru2.ent11#att47"/>
+      </Link>
+    </GetUnit>
+    <CreateUnit gr:x="326" gr:y="259" id="sv2#area4#cru3" name="AdicionarRating" entity="ent7">
+      <KOLink id="sv2#area4#cru3#kln14" name="RatingInsucesso" to="sv2#area4#page27" automaticCoupling="true"/>
+      <OKLink id="sv2#area4#cru3#oln14" name="RatingSucesso" to="sv2#area4#page15#dau2">
+        <LinkParameter id="sv2#area4#cru3#oln14#par98" name="Id_Cidade_Cidade" source="ent7#att48Array" target="sv2#area4#page15#dau2#su18#acond10"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

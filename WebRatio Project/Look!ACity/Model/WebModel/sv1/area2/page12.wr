@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page12" name="Ver Utilizadores">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area2#page12#inu4" name="Lista de Utilizadores" linkOrder="sv1#area2#page12#inu4#ln12 sv1#area2#page12#inu4#ln17" entity="User" displayAttributes="userName password email">
+      <Link id="sv1#area2#page12#inu4#ln12" name="Remover Utilizador" to="sv1#area2#dlu2" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-43,74,-27,-88"/>
+      <Link id="sv1#area2#page12#inu4#ln17" name="Lista de Coment&#225;rios" to="sv1#area2#page6#inu5" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page12#inu4#ln17#par82" name="Id_Utilizador_ComentariosUtilizador" source="data[].userOID" target="sv1#area2#page6#inu5#su11#acond1"/>
+      </Link>
+      <SortAttribute attribute="userName" order="ascending"/>
+      <Selector id="sv1#area2#page12#inu4#su21" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area2#page12#inu4#su21#acond9" name="NaoAdmin" predicate="neq" booleanOperator="or" implied="false" attributes="userOID" value="4"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area2#page12#inu4">
+          <layout:Link link="sv1#area2#page12#inu4#ln12"/>
+          <layout:Link link="sv1#area2#page12#inu4#ln17"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

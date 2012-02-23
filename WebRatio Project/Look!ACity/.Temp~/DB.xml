@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DBMetaData driverMajorVersion="5" driverMinorVersion="1" driverVersion="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" productVersion="5.5.16" identifierQuoteString="`" transactionLevel="Repeatable read" driverName="MySQL-AB JDBC Driver" productName="MySQL">
+  <Table schema="" ignoreIndexes="false" name="cidade" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_cidade" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="descricao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="area" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="num_habitantes" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_pais" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_moeda" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_lingua" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_continente" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="bandeira" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_coordenadas" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_estado" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="estado_id_estado" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="moeda_id_moeda" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="pais_id_pais" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="lingua_id_lingua" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="continente_id_continente" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="coordenadas_id_coordenadas" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="continente_id_continente" foreignColumnName="id_continente" name="fk_cidade_continente" foreignTableName="continente" foreignSchemaName=""/>
+    <ForeignKey localColumnName="coordenadas_id_coordenadas" foreignColumnName="id_coordenadas" name="fk_cidade_coordenadas" foreignTableName="coordenadas" foreignSchemaName=""/>
+    <ForeignKey localColumnName="estado_id_estado" foreignColumnName="id_estado" name="fk_cidade_estado" foreignTableName="estado" foreignSchemaName=""/>
+    <ForeignKey localColumnName="lingua_id_lingua" foreignColumnName="id_lingua" name="fk_cidade_lingua" foreignTableName="lingua" foreignSchemaName=""/>
+    <ForeignKey localColumnName="moeda_id_moeda" foreignColumnName="id_moeda" name="fk_cidade_moeda" foreignTableName="moeda" foreignSchemaName=""/>
+    <ForeignKey localColumnName="pais_id_pais" foreignColumnName="id_pais" name="fk_cidade_pais" foreignTableName="pais" foreignSchemaName=""/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="comentario" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_comentario" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="comentario" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="data" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_utilizador" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_cidade" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="cidade_id_cidade" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="cidade_id_cidade" foreignColumnName="id_cidade" name="fk_comentario_cidade" foreignTableName="cidade" foreignSchemaName=""/>
+    <ForeignKey localColumnName="user_oid" foreignColumnName="oid" name="fk_comentario_user" foreignTableName="user" foreignSchemaName=""/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="continente" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_continente" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="descricao" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="coordenadas" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_coordenadas" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="latitute" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="longitude" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="altitude" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="estado" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_estado" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="descricao" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="foto" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_foto" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="descricao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="data" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_utilizador" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_cidade" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="cidade_id_cidade" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="url" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="-4" indexed="unknown" autoIncrement="false" type="LONGBLOB" size="2147483647" decimalDigits="0" name="urlblob" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="cidade_id_cidade" foreignColumnName="id_cidade" name="fk_foto_cidade" foreignTableName="cidade" foreignSchemaName=""/>
+    <ForeignKey localColumnName="user_oid" foreignColumnName="oid" name="fk_foto_user" foreignTableName="user" foreignSchemaName=""/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="groupname" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_oid" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="module_oid" foreignColumnName="oid" name="fk_group_module" foreignTableName="module" foreignSchemaName=""/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="group_module" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="module_oid" primaryKey="true" notNull="true"/>
+    <ForeignKey localColumnName="group_oid" foreignColumnName="oid" name="fk_group_module_group" foreignTableName="group" foreignSchemaName=""/>
+    <ForeignKey localColumnName="module_oid" foreignColumnName="oid" name="fk_group_module_module" foreignTableName="module" foreignSchemaName=""/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="lingua" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_lingua" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="module" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="moduleid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="modulename" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="moeda" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_moeda" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="pais" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_pais" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nome" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="bandeira" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="rating" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_utilizador" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="id_cidade" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="classificacao" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_oid" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="cidade_id_cidade" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="cidade_id_cidade" foreignColumnName="id_cidade" name="fk_rating_cidade" foreignTableName="cidade" foreignSchemaName=""/>
+    <ForeignKey localColumnName="user_oid" foreignColumnName="oid" name="fk_rating_user" foreignTableName="user" foreignSchemaName=""/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="username" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="password" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="email" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="false" notNull="false"/>
+    <ForeignKey localColumnName="group_oid" foreignColumnName="oid" name="fk_user_group" foreignTableName="group" foreignSchemaName=""/>
+  </Table>
+  <Table schema="" ignoreIndexes="false" name="user_group" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="group_oid" primaryKey="true" notNull="true"/>
+    <ForeignKey localColumnName="group_oid" foreignColumnName="oid" name="fk_user_group_group" foreignTableName="group" foreignSchemaName=""/>
+    <ForeignKey localColumnName="user_oid" foreignColumnName="oid" name="fk_user_group_user" foreignTableName="user" foreignSchemaName=""/>
+  </Table>
+</DBMetaData>

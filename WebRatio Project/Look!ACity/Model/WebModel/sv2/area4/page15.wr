@@ -1,0 +1,103 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area4#page15" name="Ver Cidade">
+  <ContentUnits>
+    <DataUnit gr:x="18" gr:y="0" id="sv2#area4#page15#dau2" name="Ver Cidade" entity="ent2" displayAttributes="ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att37 avg(rel13#role26.ent7#att49) rel2#role3.ent9#att25 rel3#role5.ent5#att16 rel4#role7.ent6#att15 rel6#role11.ent3#att17 rel7#role13.ent12#att41 rel8#role15.ent13#att43 rel8#role15.ent13#att44 rel8#role15.ent13#att45" linkOrder="sv2#area4#page15#dau2#ln22">
+      <Selector id="sv2#area4#page15#dau2#su18" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area4#page15#dau2#su18#acond10" name="Cidade" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att2"/>
+      </Selector>
+      <Link id="sv2#area4#page15#dau2#ln22" name="Galeria de Fotos" to="sv2#area4#page18#mdu1" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page15#dau2#ln22#par96" name="Id_Cidade_Cidade" source="data.ent2#att2" target="sv2#area4#page18#mdu1#su19#acond11"/>
+      </Link>
+      <Link id="sv2#area4#page15#dau2#ln32" name="Link32" to="sv2#area4#page15#mdu2" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#page15#dau2#ln32#par116" name="Id_Cidade_PASSING" source="data.ent2#att2" passing="true"/>
+        <LinkParameter id="sv2#area4#page15#dau2#ln32#par117" name="Id_Cidade_ComentariosCidade" source="data.ent2#att2" target="sv2#area4#page15#mdu2#su20#acond8"/>
+      </Link>
+      <Link id="sv2#area4#page15#dau2#ln28" name="Link36" to="sv2#area4#page15#enu7" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#page15#dau2#ln28#par118" name="Id_Cidade_PASSING" source="data.ent2#att2" passing="true"/>
+      </Link>
+      <Link id="sv2#area4#page15#dau2#ln23" name="GuardarCidade" to="sv2#area4#stu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area4#page15#dau2#ln34" name="Link34" to="sv2#area4#page15#enu8" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#page15#dau2#ln34#par97" name="Id_Cidade_PASSING" source="data.ent2#att2" passing="true"/>
+      </Link>
+    </DataUnit>
+    <MultiDataUnit gr:x="0" gr:y="123" id="sv2#area4#page15#mdu2" name="Lista de Coment&#225;rios" entity="ent8" displayAttributes="ent8#att26 ent8#att27">
+      <SortAttribute attribute="ent8#att27" order="descending"/>
+      <Selector id="sv2#area4#page15#mdu2#su20" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area4#page15#mdu2#su20#acond8" name="ComentariosCidade" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att50"/>
+      </Selector>
+    </MultiDataUnit>
+    <EntryUnit gr:x="0" gr:y="263" id="sv2#area4#page15#enu7" name="Fazer Coment&#225;rio" linkOrder="sv2#area4#page15#enu7#ln33">
+      <Field id="sv2#area4#page15#enu7#fld23" name="Comentario" type="string" modifiable="true"/>
+      <Field id="sv2#area4#page15#enu7#fld24" name="Data" type="date" modifiable="true"/>
+      <Link id="sv2#area4#page15#enu7#ln33" name="Comentar" to="sv2#area4#cru5" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page15#enu7#ln33#par120" name="Comentario_Comentario" source="sv2#area4#page15#enu7#fld23" target="sv2#area4#cru5.ent8#att26"/>
+        <LinkParameter id="sv2#area4#page15#enu7#ln33#par121" name="Data_Data" source="sv2#area4#page15#enu7#fld24" target="sv2#area4#cru5.ent8#att27"/>
+        <LinkParameter id="sv2#area4#page15#enu7#ln33#par119" name="Id_Cidade_PASSING_Cidade.Id_Cidade(ComentarioToCidade)" sourceLinkParameter="sv2#area4#page15#dau2#ln28#par118" target="sv2#area4#cru5.rel14#role27.ent2#att2"/>
+        <LinkParameter id="sv2#area4#page15#enu7#ln33#par122" name="Id_Cidade_PASSING_Id_Cidade" sourceLinkParameter="sv2#area4#page15#dau2#ln28#par118" target="sv2#area4#cru5.ent8#att50"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit gr:x="150" gr:y="263" id="sv2#area4#page15#enu8" name="Rating" linkOrder="sv2#area4#page15#enu8#ln35">
+      <Field id="sv2#area4#page15#enu8#fld12" name="Classificacao" type="integer" modifiable="true"/>
+      <Link id="sv2#area4#page15#enu8#ln35" name="Classificar" to="sv2#area4#cru3" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page15#enu8#ln35#par99" name="Classificacao_Classificacao" source="sv2#area4#page15#enu8#fld12" target="sv2#area4#cru3.ent7#att49"/>
+        <LinkParameter id="sv2#area4#page15#enu8#ln35#par103" name="Id_Cidade_PASSING_Cidade.Id_Cidade(RatingToCidade)" sourceLinkParameter="sv2#area4#page15#dau2#ln34#par97" target="sv2#area4#cru3.rel13#role25.ent2#att2"/>
+        <LinkParameter id="sv2#area4#page15#enu8#ln35#par105" name="Id_Cidade_PASSING_Id_Cidade" sourceLinkParameter="sv2#area4#page15#dau2#ln34#par97" target="sv2#area4#cru3.ent7#att48"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page15#dau2">
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att19"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att21"/>
+          <layout:Attribute attribute="ent2#att37"/>
+          <layout:Attribute attribute="avg(rel13#role26.ent7#att49)"/>
+          <layout:Attribute attribute="rel2#role3.ent9#att25"/>
+          <layout:Attribute attribute="rel3#role5.ent5#att16"/>
+          <layout:Attribute attribute="rel4#role7.ent6#att15"/>
+          <layout:Attribute attribute="rel6#role11.ent3#att17"/>
+          <layout:Attribute attribute="rel7#role13.ent12#att41"/>
+          <layout:Attribute attribute="rel8#role15.ent13#att43"/>
+          <layout:Attribute attribute="rel8#role15.ent13#att44"/>
+          <layout:Attribute attribute="rel8#role15.ent13#att45"/>
+          <layout:Link link="sv2#area4#page15#dau2#ln22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page15#enu8">
+          <layout:Field field="sv2#area4#page15#enu8#fld12"/>
+          <layout:Link link="sv2#area4#page15#enu8#ln35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page15#mdu2">
+          <layout:Attribute attribute="ent8#att26"/>
+          <layout:Attribute attribute="ent8#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page15#enu7">
+          <layout:Field field="sv2#area4#page15#enu7#fld23"/>
+          <layout:Field field="sv2#area4#page15#enu7#fld24"/>
+          <layout:Link link="sv2#area4#page15#enu7#ln33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
