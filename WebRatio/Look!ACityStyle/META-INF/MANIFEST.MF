@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Look!ACityStyle
-Bundle-SymbolicName: Look!ACityStyle;singleton:=true
-Bundle-Version: 1.0.0
-Bundle-Vendor: 
-Require-Bundle: com.webratio.ide.styles

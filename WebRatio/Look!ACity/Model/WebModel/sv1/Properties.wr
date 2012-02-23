@@ -1,3 +1,0 @@
-<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Administra&#231;&#227;o" landmarks="sv1#area9 sv1#area8 sv1#area1 sv1#area2 sv1#area6" protected="true" homePage="sv1#area8#page9" layout:style="Look!ACityStyle" layout:loginPage="Look!ACityStyle/Default">
-  <OperationUnits/>
-</SiteView>
